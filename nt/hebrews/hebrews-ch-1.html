@@ -105,6 +105,10 @@ a:hover, a:active {
 		<button style="color:purple" onclick="showObserve('p_04', 'purple'); showAnswer('p_05', '[ 因 为 / For ] ')">引 用 目 的</button> 
 		<button style="color:violet" onclick="showObserve('p_06', 'violet')">结 构 特 色 一</button>
 		<button style="color:orange" onclick="showObserve('p_07', 'orange')">结 构 特 色 二</button>
+		<button style="color:black" onclick="clearObserve('p_01'); clearObserve('p_02');clearObserve('p_08');clearObserve('p_09');clearObserve('p_03');
+						clearAnswer('p_03_01');clearAnswer('p_03_02');clearAnswer('p_03_03');clearAnswer('p_03_04');clearAnswer('p_03_05');clearAnswer('p_03_06');clearAnswer('p_03_07');
+						clearObserve('p_04');clearAnswer('p_05');
+						clearObserve('p_06');clearObserve('p_07');">复 原</button>
 		
 		<div style="margin-left: 30px">
 			<p><h4>
@@ -417,6 +421,19 @@ function showObserve(id, displayColor) {
 		match[i].style.border = "thin solid gray";
 	}
   }
+}
+
+function clearObserve(id) {
+  var match = document.getElementsByClassName(id);
+  for (var i=0; i < match.length; i++) {
+    match[i].style.color = "black";
+	match[i].style.border = "none";
+  }
+}
+
+function clearAnswer(id) {
+  var x = document.getElementById(id);
+  x.innerHTML = "";
 }
 </script>
 
