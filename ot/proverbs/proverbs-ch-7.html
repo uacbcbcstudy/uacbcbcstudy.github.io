@@ -134,6 +134,7 @@ a:hover, a:active {
 				<button style="color:purple" onclick="showObserve('p_04', 'purple')">发 生 什 么</button>
 				<button style="color:orange" onclick="showObserve('p_05', 'orange')">劝 告</button>
 				<button style="color:violet" onclick="showObserve('p_06', 'violet')">结 局</button>
+				<button style="color:black" onclick="clearObserve('p_01'); clearObserve('p_02'); clearObserve('p_03'); clearObserve('p_04'); clearObserve('p_05'); clearObserve('p_06');">复 原</button>
 				<br></br>
 			</ul>
 		</div>
@@ -505,6 +506,14 @@ function showObserve(id, displayColor) {
 		match[i].style.color = displayColor;
 		match[i].style.border = "thin solid gray";
 	}
+  }
+}
+
+function clearObserve(id) {
+  var match = document.getElementsByClassName(id);
+  for (var i=0; i < match.length; i++) {
+    match[i].style.color = "black";
+	match[i].style.border = "none";
   }
 }
 </script>
