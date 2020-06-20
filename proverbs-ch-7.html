@@ -457,9 +457,9 @@ function openCity(evt, cityName, id, tab) {
   }
   document.getElementById(cityName).style.display = "block";
   if (tab == "tab") { // call from tab, not from other link
-	evt.currentTarget.className += " w3-red";
+    if (evt == "click") {tablinks[0].className += " w3-red";} 
+	else {evt.currentTarget.className += " w3-red";}
   }
-  
   // for call from other button on the page
   tabid = document.getElementById(id);
   if (tabid.className.indexOf("w3-red") == -1) {tabid.className += " w3-red";}
